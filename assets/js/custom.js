@@ -71,11 +71,11 @@ jQuery(document).ready(function () {
         loop: true,
         spaceBetween: 50,
         slideToClickedSlide: true,
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        //     pauseOnMouseEnter: true,
-        // },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
         navigation: {
             nextEl: ".service-slider-outer .swiper-button-next",
             prevEl: ".service-slider-outer .swiper-button-prev",

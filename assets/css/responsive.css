@@ -7,6 +7,17 @@
 
 @media (max-width: 1199px) {}
 
+@media (min-width: 992px) {
+	.transformationWrapper .row {
+		margin-left: -35px;
+		margin-right: -35px;
+	}
+
+	.transformationWrapper [class*="col-"] {
+		padding: 0 35px;
+	}
+}
+
 @media (max-width: 991px) {
 	.logo {
 		width: 250px;
