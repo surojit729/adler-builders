@@ -1816,15 +1816,22 @@ input[type="number"]::-webkit-outer-spin-button {
 	background: #1A1B20;
 	padding: 30px 25px;
 	border-radius: 20px;
-	border: 1px solid;
-	border-image-source: linear-gradient(90.19deg, #2D2F37 0.18%, #1A1B20 20.61%, #1A1B20 80.91%, #2D2F37 99.85%);
 	height: 100%;
-	-webkit-backdrop-filter: blur(4px);
-	backdrop-filter: blur(4px);
-	/* border-image-slice: 1; */
-	overflow: hidden;
 	position: relative;
 	transition: var(--primary-transition);
+}
+
+.whyUsBox::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 20px;
+	padding: 1px;
+	background: linear-gradient(90.19deg, #2D2F37 0.18%, #1A1B20 20.61%, #1A1B20 80.91%, #2D2F37 99.85%);
+	-webkit-mask: linear-gradient(white 0 0) content-box,
+		linear-gradient(white 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
 }
 
 .whyUsBox .iconHolder {
@@ -1965,6 +1972,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	color: var(--color-white);
 	width: 36px;
 	height: 36px;
+	min-width: 36px;
 	border-radius: 100%;
 	float: right;
 	font-size: 18px;
@@ -2210,8 +2218,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .testimonialWrapper .formHolder {
-	border: 1px solid;
-	border-image-source: linear-gradient(180deg, #606060 0%, #2C2C2C 100%);
 	background: #232429;
 	padding: 30px;
 	border-radius: 20px 20px 0 0;
@@ -2219,6 +2225,21 @@ input[type="number"]::-webkit-outer-spin-button {
 	position: relative;
 	z-index: 2;
 }
+
+.testimonialWrapper .formHolder::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 20px 20px 0 0;
+	padding: 1px;
+	background: linear-gradient(180deg, #606060 0%, #2C2C2C 100%);
+	-webkit-mask: linear-gradient(white 0 0) content-box,
+		linear-gradient(white 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+}
+
 
 .testimonialWrapper .formHolder .formTitleHolder h3 {
 	font-size: 45px;
