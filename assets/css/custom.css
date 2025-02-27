@@ -392,7 +392,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .section-heading h2 {
-	font-size: 55px;
+	font-size: 60px;
 	line-height: 1.3;
 	font-weight: 400;
 	color: var(--color-white);
@@ -2314,12 +2314,12 @@ input[type="number"]::-webkit-outer-spin-button {
 	position: relative;
 }
 
-.conceptTransformationWrapper ::before {
+.conceptTransformationWrapper::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 50%;
+	left: 54%;
 	transform: translateX(-50%);
 	height: 100%;
 	border-left: 1px solid #292B33;
@@ -2355,6 +2355,17 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .whyRemodelWrapper {
 	position: relative;
+}
+
+.whyRemodelWrapper::before {
+	content: "";
+	position: absolute;
+	top: -80px;
+	left: -98px;
+	background-image: url(../images/our-story-watermark.svg);
+	width: 478px;
+	height: 429px;
+	pointer-events: none;
 }
 
 .whyRemodelWrapper .section-heading {
@@ -2687,4 +2698,31 @@ input[type="number"]::-webkit-outer-spin-button {
 	height: 300px;
 	background-color: #1A1B20;
 	position: relative;
+}
+
+.ownerBioWrapper .conceptTransformationPic {
+	margin-top: 0;
+	height: 530px;
+}
+
+.ownerBioWrapper .section-heading h2 {
+	margin-bottom: 35px;
+}
+
+.signaturePic {
+	margin-top: 50px;
+}
+
+.whyRemodelWrapper .section-heading h3 {
+	color: var(--color-white);
+	font-size: 38px;
+	margin-bottom: 25px;
+}
+
+.aboutWhyUsWrapper .whyUsBox .iconHolder {
+	justify-content: center;
+}
+
+.aboutWhyUsWrapper .whyUsBox .descpText {
+	text-align: center;
 }
